@@ -36,5 +36,7 @@
     "build:web": "expo export --platform web && node scripts/postexport.js",
     "deploy": "npm run build:web && npx firebase-tools deploy --only hosting,firestore:rules"
   },
-  "private": true
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Efe (fahriefe)"
 }

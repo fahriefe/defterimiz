@@ -1,21 +1,45 @@
-The MIT License (MIT)
+Copyright (c) 2026 Efe (github.com/fahriefe). All rights reserved.
+Tüm hakları saklıdır.
 
-Copyright (c) 2015-present 650 Industries, Inc. (aka Expo)
+SOURCE-AVAILABLE, NOT OPEN SOURCE / KAYNAK KODU GÖRÜNÜR, AÇIK KAYNAK DEĞİLDİR
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This repository is public only so that it can be viewed as part of the author's
+portfolio. Viewing the source code, and cloning it solely to read and evaluate
+it (for example during a hiring or code review), is permitted.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Without the author's prior written permission, you may NOT:
+  - copy, reproduce, or reuse all or any substantial part of the code, design,
+    text, sounds, icons, or other assets in your own projects or products;
+  - modify, adapt, translate, or create derivative works;
+  - distribute, publish, sublicense, sell, rent, or host the software or any
+    part of it, whether free of charge or for a fee;
+  - re-brand the application or present it as your own work;
+  - use the source code or assets to train machine-learning models.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+No patent or trademark rights are granted. The software is provided "as is",
+without warranty of any kind. The author is not liable for any damages arising
+from its use.
+
+Third-party components (npm packages, fonts, and the Expo project template)
+remain under their own licenses; see THIRD_PARTY_LICENSES.md.
+
+---
+
+Bu depo yalnızca yazarın portfolyosunun bir parçası olarak görüntülenebilsin
+diye herkese açıktır. Kaynak kodunu görüntülemek ve yalnızca okuyup
+değerlendirmek amacıyla (ör. işe alım ya da kod incelemesi) klonlamak serbesttir.
+
+Yazarın önceden yazılı izni olmadan şunları YAPAMAZSINIZ:
+  - kodun, tasarımın, metinlerin, seslerin, simgelerin ya da diğer içeriğin
+    tamamını veya önemli bir bölümünü kendi projelerinizde kopyalamak ya da
+    yeniden kullanmak;
+  - değiştirmek, uyarlamak, çevirmek ya da türev eser üretmek;
+  - yazılımı ya da bir bölümünü dağıtmak, yayımlamak, alt lisanslamak, satmak,
+    kiralamak veya barındırmak (ücretli ya da ücretsiz);
+  - uygulamanın adını değiştirip kendi eseriniz gibi sunmak;
+  - kaynak kodu ya da içeriği makine öğrenmesi modellerini eğitmek için kullanmak.
+
+Hiçbir patent veya marka hakkı verilmemektedir. Yazılım "olduğu gibi",
+herhangi bir garanti olmaksızın sunulur.
+
+İzin talepleri için: https://github.com/fahriefe

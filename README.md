@@ -102,6 +102,10 @@ Gerekenler: Node.js 20+ ve ücretsiz bir Firebase hesabı.
 - Seri bonusu, özel gün çift puanı
 - Bildirimde gönderenin adı
 
+## 📄 Lisans
+
+**Tüm hakları saklıdır.** Kod, portfolyo amacıyla herkese açıktır: **okuyabilir ve inceleyebilirsiniz**, ama izinsiz kopyalayamaz, değiştirip yayımlayamaz ya da kendi ürününüzde kullanamazsınız. Ayrıntılar için [LICENSE](LICENSE), kullanılan açık kaynak bileşenler için [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md). Güvenlik açığı bildirimi için [SECURITY.md](SECURITY.md).
+
 ---
 
 Sevgiyle yapıldı 💗
