@@ -48,7 +48,7 @@ type Ctx = {
   savePush(subscription: string): Promise<void>;
   logout(): Promise<void>;
 };
-const DataCtx = createContext<Ctx>(null as any);
+export const DataCtx = createContext<Ctx>(null as any);
 export const useData = () => useContext(DataCtx);
 
 export function DataProvider({ children }: { children: React.ReactNode }) {

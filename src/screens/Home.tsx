@@ -4,6 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { completedDays, dayKey, Gift, useData } from '../data';
 import { Avatar, pickAvatar, Btn, Burst, Card, CoinPill, Note, Polaroid, Screen, SectionTitle, Txt, notify, shareText } from '../ui';
 import { BUILD, C, giftOf, shadow } from '../theme';
+import { isDemo } from '../demo';
 import { play } from '../sounds';
 import { isIOS, isInstalled, diagnose, permission, pushConfigured, pushSupported, subscribePush } from '../push';
 
@@ -212,7 +213,9 @@ export default function Home({ go }: { go: (t: 'compose' | 'shop') => void }) {
       {partnerId && <Btn title="🎁 Hediye gönder" kind="soft" onPress={() => go('shop')} />}
 
       <View style={{ alignItems: 'center', marginTop: 28 }}>
-        {!confirmOut ? (
+        {isDemo ? (
+          <Txt v="bold" size={13} color={C.soft} style={{ textAlign: 'center' }}>✨ Demo modu: örnek verilerle çalışır, hiçbir şey kaydedilmez</Txt>
+        ) : !confirmOut ? (
           <Pressable onPress={() => setConfirmOut(true)} hitSlop={10}>
             <Txt v="bold" size={14} color={C.soft}>Çıkış yap</Txt>
           </Pressable>

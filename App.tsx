@@ -6,6 +6,8 @@ import { Nunito_600SemiBold, Nunito_800ExtraBold, Nunito_900Black } from '@expo-
 import { Caveat_700Bold } from '@expo-google-fonts/caveat';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { DataProvider, useData } from './src/data';
+import { DemoProvider } from './src/DemoProvider';
+import { isDemo } from './src/demo';
 import Onboarding from './src/screens/Onboarding';
 import Home from './src/screens/Home';
 import Compose from './src/screens/Compose';
@@ -89,7 +91,7 @@ export default function App() {
       <StatusBar style="dark" />
       <View style={{ flex: 1, backgroundColor: C.bg, alignItems: 'center' }}>
         <View style={{ flex: 1, width: '100%', maxWidth: 520 }}>
-          <DataProvider><Root /></DataProvider>
+          {isDemo ? <DemoProvider><Root /></DemoProvider> : <DataProvider><Root /></DataProvider>}
           <ToastHost />
           <InstallBanner />
         </View>

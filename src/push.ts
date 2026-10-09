@@ -1,9 +1,10 @@
 import { Platform } from 'react-native';
 import { PUSH_URL, VAPID_PUBLIC_KEY } from './pushConfig';
+import { isDemo } from './demo';
 
 const w: any = Platform.OS === 'web' && typeof window !== 'undefined' ? window : null;
 
-export const pushConfigured = () => !!w && PUSH_URL !== 'BURAYA';
+export const pushConfigured = () => !!w && !isDemo && PUSH_URL !== 'BURAYA';
 export const pushSupported = () => !!w && 'serviceWorker' in navigator && 'PushManager' in w && 'Notification' in w;
 export const isIOS = () => !!w && (/iphone|ipad|ipod/i.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && (navigator as any).maxTouchPoints > 1));
 export const isInstalled = () => !!w && (w.matchMedia?.('(display-mode: standalone)').matches || (navigator as any).standalone === true);

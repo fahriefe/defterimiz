@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Animated, Easing, Image, Platform, Pressable, View } from 'react-native';
 import { C, shadow } from './theme';
 import { Txt } from './ui';
+import { isDemo } from './demo';
 
 const KEY = 'defterimiz.installDismissedAt';
 const WEEK = 7 * 24 * 3600 * 1000;
@@ -28,7 +29,7 @@ export default function InstallBanner() {
   const a = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    if (Platform.OS !== 'web' || isStandalone() || inAppBrowser() || Date.now() - read() < WEEK) return;
+    if (Platform.OS !== 'web' || isDemo || isStandalone() || inAppBrowser() || Date.now() - read() < WEEK) return;
     const t = setTimeout(() => {
       const ios = isIOS();
       if (!ios && !deferred) return; // Android'de tarayıcı kurulumu desteklemiyorsa gösterme
