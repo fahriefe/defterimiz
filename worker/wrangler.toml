@@ -1,0 +1,7 @@
+name = "defterimiz-push"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+VAPID_PUBLIC_KEY = "BNbbIBrhPD9L9WNquEe_tdin71BDY38mNi-nvQ9kGQHTayVVNg4us_ohYXrnMXvUdI2H5BqxzvjTEC0bgb7wjzw"
+VAPID_SUBJECT = "https://ciftapp-e6cf9.web.app"
