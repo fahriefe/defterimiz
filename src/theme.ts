@@ -37,7 +37,7 @@ export const GIFTS: Gift_[] = RAW.map(([kind, emoji, name, cost, sound], i) => {
   return { kind, emoji, name, cost, sound, tier, bg: BGS[tier][i % BGS[tier].length] };
 });
 export const giftOf = (k: string) => GIFTS.find((g) => g.kind === k) ?? GIFTS[1];
-export const BUILD = 'v18';
+export const BUILD = 'v19';
 export const POINTS_PER_ENTRY = 10;
 export const DAILY_REWARDED_ENTRIES = 3;
 

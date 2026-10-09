@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Animated, Easing, Image, Platform, Pressable, View } from 'react-native';
 import { C, shadow } from './theme';
-import { Txt } from './ui';
+import { Txt, notify } from './ui';
 import { isDemo } from './demo';
 
 const KEY = 'defterimiz.installDismissedAt';
@@ -53,6 +53,15 @@ export default function InstallBanner() {
     close();
   };
 
+  // iPhone'da siteler doğrudan "yükle" yapamaz; paylaşma menüsünü açmak en yakın yol ("Ana Ekrana Ekle" orada)
+  const openShare = async () => {
+    try {
+      const n: any = navigator;
+      if (n.share) await n.share({ title: 'Defterimiz', url: location.origin });
+      else notify('Paylaş menüsü açılamadı', 'Safari\'nin alttaki Paylaş simgesine dokun, sonra "Ana Ekrana Ekle"yi seç.');
+    } catch {}
+  };
+
   if (!show) return null;
   const ios = isIOS();
   return (
@@ -79,11 +88,16 @@ export default function InstallBanner() {
             <Txt v="black" size={15} color="#fff">⬇️ İndir</Txt>
           </Pressable>
         ) : (
-          <View style={{ marginTop: 12, backgroundColor: C.pinkSoft, borderRadius: 18, padding: 12 }}>
-            <Txt v="bold" size={13} color={C.pinkDeep}>
-              1) Alttaki Paylaş simgesine dokun (⬆️ kutu){'\n'}2) "Ana Ekrana Ekle"yi seç{'\n'}3) Sağ üstten "Ekle"ye bas
-            </Txt>
-          </View>
+          <>
+            <Pressable onPress={openShare} style={({ pressed }) => ({ marginTop: 12, backgroundColor: C.pink, borderRadius: 999, paddingVertical: 12, alignItems: 'center', transform: [{ scale: pressed ? 0.97 : 1 }] })}>
+              <Txt v="black" size={15} color="#fff">📤 Paylaş menüsünü aç</Txt>
+            </Pressable>
+            <View style={{ marginTop: 10, backgroundColor: C.pinkSoft, borderRadius: 18, padding: 12 }}>
+              <Txt v="bold" size={13} color={C.pinkDeep}>
+                1) Yukarıdaki düğmeye bas (ya da Safari'nin Paylaş ⬆️ simgesine){'\n'}2) Açılan menüde aşağı kaydır, "Ana Ekrana Ekle"yi seç{'\n'}3) Sağ üstten "Ekle"ye bas
+              </Txt>
+            </View>
+          </>
         )}
       </View>
     </Animated.View>
